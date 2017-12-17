@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/dbspace/omnichannel-config-repo
+          username:
+          passphrase:
+server:
+  port: 8888
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:password@${eureka.instance.hostname}:8761/eureka/
+  instance:
+    hostname: 127.0.0.1

@@ -94,6 +94,8 @@
 	</dependencyManagement>
 
 	<build>
+		<finalName>${project.name}</finalName>
+
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
@@ -114,7 +116,6 @@
 					</execution>
 				</executions>
 				<configuration>
-					<serverId>docker-hub</serverId>
 					<imageName>omni/${project.build.finalName}</imageName>
 					<imageTags>
 						<imageTag>0.0.1</imageTag>
